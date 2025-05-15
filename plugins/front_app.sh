@@ -5,6 +5,10 @@
 # focused application in the $INFO variable:
 # https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
 
+#!/bin/sh
+
+source "$CONFIG_DIR/colors.sh"
+
 if [ "$SENDER" = "front_app_switched" ]; then
-  sketchybar --set "$NAME" label="$INFO"
+  sketchybar --set "$NAME" label="$INFO" label.color=$FLAMINGO
 fi
